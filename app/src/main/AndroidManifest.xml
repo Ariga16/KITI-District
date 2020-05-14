@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dacasa.sdakitidistrict">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_h_foregroun"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".AuthorDetails"
+            android:parentActivityName=".AuthorActivity"
+            ></activity>
+        <activity android:name=".AuthorActivity"
+            android:label="Authors"
+            android:parentActivityName=".Activities.MainActivity"/>
+        <activity android:name=".AddFeed" />
+        <activity android:name=".Activities.Email" />
+        <activity
+            android:name=".SettingsActivity2"
+            android:label="@string/title_activity_settings2" />
+        <activity android:name=".Activities.BibleView" />
+        <activity
+            android:name=".Activities.kjvBibleActivity"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name=".Lesson1"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Nyimbo_Details"
+            android:allowBackup="true"
+            android:parentActivityName=".NyimboZaKrist"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".NyimboZaKrist"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".Nyimbo_splash" />
+        <activity
+            android:name=".AboutUs"
+            android:label="About This App"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name=".Setting"
+            android:label="Settings"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name=".Activities.PostDetailActivity"
+            android:parentActivityName=".Activities.MainActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".Bible" />
+        <activity
+            android:name=".Mission"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label=" SDA KITI DISTRICT"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activities.RegisterActivity" />
+        <activity android:name=".Fragments.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.firebase.MESSAGING_EVENT"
+            android:resource="@drawable/app_icon" />
+
+        <activity android:name=".Activities.HomeActivity" />
+        <activity
+            android:name=".NoteEditorActivity"
+            android:label="New Note"
+            android:parentActivityName=".Notes"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".Notes"
+            android:label="My Notes"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Splash" />
+        <activity android:name=".Activities.Login_church" />
+        <activity android:name=".Activities.LoginDepartment" />
+    </application>
+
+</manifest>

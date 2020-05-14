@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "591844897062",
+    "firebase_url": "https://sda-kiti-district-9a0cf.firebaseio.com",
+    "project_id": "sda-kiti-district-9a0cf",
+    "storage_bucket": "sda-kiti-district-9a0cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591844897062:android:c1d911707f4696c6a311e7",
+        "android_client_info": {
+          "package_name": "com.dacasa.sdakitidistrict"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591844897062-6u7e31piasmodb6pndn9r3h2tmv932ns.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuwqFN_qEKmBoFcq53cRkAFaNPf6CcptA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591844897062-6u7e31piasmodb6pndn9r3h2tmv932ns.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

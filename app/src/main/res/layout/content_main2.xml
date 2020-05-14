@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+
+
+    </FrameLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabTextColor="#ffffff">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/firstitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matangazo" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/secondItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calender" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/thirdItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mission" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/fourthItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lesson" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <ProgressBar
+        android:id="@+id/pbcontainer"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        style="?android:attr/progressBarStyle"
+        app:layout_constraintEnd_toEndOf="@+id/container"
+        app:layout_constraintStart_toStartOf="@+id/container">
+
+    </ProgressBar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

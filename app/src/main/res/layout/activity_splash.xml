@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorAccent"
+    tools:context=".Splash">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="396dp"
+            android:layout_height="287dp"
+            android:gravity="center"
+            android:text="happy sabbath"
+            android:textColor="?attr/colorAccent"></TextView>
+
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="183dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher_h_foreground"
+            android:tint="?attr/colorAccent"></ImageView>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="fill_vertical"
+            android:drawableLeft="@mipmap/ic_launcher_h_foregroun_foreground"
+            android:drawableTint="@color/NAD_DENIM"
+            android:drawablePadding="1dp"
+            android:gravity="fill_vertical"
+            android:paddingLeft="65dp"
+            android:paddingRight="0dp"
+            android:text=" SEVENTH-DAY\n    ADVENTIST\n  KITI DISTRICT"
+            android:textColor="@color/NAD_DENIM"
+            android:textSize="22dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="happy day"
+            android:textColor="?attr/colorAccent"
+            android:gravity="center">
+
+        </TextView>
+
+
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="happyh sabbath"
+            android:textColor="?attr/colorAccent"
+            android:gravity="center_horizontal"
+            ></TextView>
+
+
+        <TextView
+            android:layout_width="401dp"
+            android:layout_height="4dp"
+            android:gravity="center"
+            android:text="powered by Camper Globe"
+            android:textColor="?attr/colorAccent"></TextView>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="happy sabbath"
+            android:textColor="?attr/colorAccent"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="51dp"
+            android:text="happy sabbath"
+            android:textColor="?attr/colorAccent"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:textColor="?attr/colorAccent"
+            android:text="happy sabbath"></TextView>
+
+
+        <TextView
+            android:id="@+id/tvPower"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:gravity="center"
+            android:text="powered by Camper Globe."
+            android:textColor="@color/NAD_DENIM"
+            android:textSize="10sp"></TextView>
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

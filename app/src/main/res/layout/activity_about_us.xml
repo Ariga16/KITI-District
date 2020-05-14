@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="?attr/backgroundcolor"
+    tools:context=".AboutUs">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"
+        android:visibility="visible">
+    </include>
+
+
+    <Space
+        android:layout_width="363dp"
+        android:layout_height="17dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardviewAbt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/LinearAbt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="?attr/cardbackground"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:textColor="?attr/textcolor"
+                android:text="©SDA KITI DISTRICT"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <Space
+                android:layout_width="344dp"
+                android:layout_height="24dp" />
+
+            <TextView
+                android:textColor="?attr/textcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version 1.0"
+                android:layout_gravity="center">
+
+            </TextView>
+
+
+            <TextView
+                android:textColor="?attr/textcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="©2020 Camper Globe,LLC,"
+                android:layout_gravity="center">
+            </TextView>
+
+            <TextView
+                android:textColor="?attr/textcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Operating System Android v4.1"
+                android:layout_gravity="center">
+            </TextView>
+
+            <TextView
+                android:textColor="?attr/textcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All rights reserved.Patent pending."
+                android:layout_gravity="center">
+
+            </TextView>
+
+
+            <Space
+                android:layout_width="344dp"
+                android:layout_height="24dp" />
+
+            <TextView
+                android:textColor="?attr/textcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camper Globe is privileged to have developed this application for SDA KITI District"
+                android:gravity="center">
+
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="10dp"
+                android:id="@+id/BtnFeedback"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/Miracle"
+                android:layout_gravity="right">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text ="Suggestions and ideas"
+                    android:gravity="fill_horizontal"
+                    android:layout_gravity="center"
+                    android:textStyle="italic"
+                    android:textColor="@color/colorAccent">
+
+                </TextView>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+
+        android:id="@+id/LinearImg"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@id/toolbar"
+        android:gravity="">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/omenlogo" />
+    </LinearLayout>
+
+
+</RelativeLayout>

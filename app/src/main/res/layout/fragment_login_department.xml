@@ -1,0 +1,225 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.LoginDepartment"
+    android:background="@drawable/dark_gradient">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@color/colorAccent"
+        android:text="Almost Done..."
+        android:id="@+id/prompt"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="sans-serif-thin"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@+id/prompt"
+        android:textColor="@color/colorAccent"
+        android:text="Select your department. You can select multiple departments"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="sans-serif-thin"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/checkes"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        android:weightSum="2">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Family Ministry"
+                android:id="@+id/youth"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Women Ministry"
+                android:id="@+id/brigade"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stewardship"
+                android:id="@+id/ce"
+                app:buttonTint="@color/colorAccent"
+                android:padding="5dp"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Public Affairs and Religious Liberty"
+                android:id="@+id/evangelism"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Youth"
+                android:id="@+id/nendeni"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/publishing"
+                android:text="Publishing"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ministerial"
+                android:text="Ministerial Association"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health Ministry"
+                android:id="@+id/guild"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Communication"
+                android:id="@+id/pcmf"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AMO"
+                android:id="@+id/jprc"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Education"
+                android:id="@+id/hospitality"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Special Need Ministry"
+                android:id="@+id/welfare"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/children"
+                android:text="Children's Ministry"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sabbathSch"
+                android:text="Sabbath School/Personal Ministry"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FINISH"
+        android:layout_below="@+id/checkes"
+        android:layout_margin="30dp"
+        android:id="@+id/proceed"
+        android:background="@drawable/regstyledenim"
+        android:textColor="@color/colorAccent"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="songs_title">
+        <item>1: Mtakatifu, Mtakatifu, Mtakatifu</item>
+        <item>2: Twamsifu Mungu</item>
+        <item>3: Mungu Atukuzwe</item>
+        <item>4: Jina la Yesu,salamu</item>
+        <item>5: Na Tumwabudu Mfalme Mtukufu</item>
+        <item>6: Kumekucha Kwa Uzuri</item>
+        <item> 7: Mungu Msaada Wetu</item>
+        <item>8:Uje Mkombozi</item>
+        <item>9: Mwumbaji, Mfalme</item>
+        <item>10: Kristo Wa Neema Yote </item>
+        <item> 11: Jina La Bwana Li Heri</item>
+        <item>12: Msifu Mungu</item>
+        <item>13:Yesu Uje Kwetu</item>
+        <item>14: Nitembee Nawe</item>
+        <item>15: Nena Mungu</item>
+        <item>16: Ninakuhitaji</item>
+        <item>17: Si Mimi, Kristo</item>
+        <item>18: Mwokozi, Kama Mchunga</item>
+        <item>19: Msalabani Pa Mwokozi</item>
+        <item> 20: Mungu Wetu Yeye Mwamba</item>
+        <item> 21: Baba Twakujia</item>
+        <item>22: Usinipite</item>
+        <item>23: Yesu Furaha Ya Moyo</item>
+        <item> 24: Jina La Yesu Tamu</item>
+        <item> 25: Taji Mvikeni</item>
+        <item>26: Tutokapo Tubariki</item>
+        <item> 26a: Tupe Amani</item>
+        <item>27: Tena, Mwokozi, Twalitukuza Jina Lako</item>
+        <item> 28: Jina La Thamani</item>
+        <item> 29: Yesu, Nakupenda</item>
+        <item>30: Yesu, Unipendaye</item>
+        <item>31: Niimbe Pendo Lako</item>
+        <item>32: Tangu Kuamini</item>
+        <item>33: Karibu Sana</item>
+        <item>34: Hadithi Kisa Cha Yesu</item>
+        <item>35: Nimekombolewa Na Yesu</item>
+        <item>36: Siku Kuu</item>
+        <item>37: Pendo Lako, Ee Mwokozi</item>
+        <item> 38: Nasifu Shani Ya Mungu</item>
+        <item>39: Ati, Kuna Mvua Njema</item>
+        <item>40: Nijaze Sasa</item>
+        <item>41: Roho Mtakatifu</item>
+        <item> 42: Ewe Roho wa mbinguni</item>
+        <item>43: Furaha Gani!</item>
+        <item> 44: Urafiki Wa Yesu</item>
+        <item>45: Mwanga Umo Mwoyoni.</item>
+        <item>46: Miguuni Pake Yesu</item>
+        <item>47: Ni Heri Kifungo</item>
+        <item> 48: Ninakupenda Zaidi</item>
+        <item>49: Ninaye Rafiki</item>
+        <item> 50: Mungu Nawe Nanyi Daima</item>
+        <item> 51: Kuwa Na Yesu</item>
+        <item> 52: Nipe Biblia</item>
+        <item>53: Napenda Kuhubiri!</item>
+        <item>54: Nataka Nimjue Yesu!</item>
+        <item> 55: Twapanda Mapema</item>
+        <item>56: Waponyeni Watu</item>
+        <item>57: Usikatae Kazi</item>
+        <item>58: Zitakuwa Nyota Tajini?</item>
+        <item>59: Fanyeni Kazi Zenu</item>
+        <item>60: Nitakwenda Utakaponituma</item>
+        <item>61: Bwana, Nami </item>
+        <item>62: Napenda Kitabu Chake </item>
+        <item>63: Niuonapo Msalaba</item>
+        <item>64: Piga Panda </item>
+        <item>65: Twendeni Askari </item>
+        <item>66: Roho Yangu Amka Sasa </item>
+        <item>67: Kesha Roho Yangu </item>
+        <item>68: Tusimame Imara Mwambani </item>
+        <item> 69: Cha Kutumaini Sina</item>
+        <item>70: Wapenzi Wa Bwana </item>
+        <item>71: Kesheni Kaombeni </item>
+        <item>72:Jenga Juu Ya Mwamba</item>
+        <item>73: "Bwana, Uniongoze Juu" </item>
+        <item>74: Niambie, Ee Mlinzi </item>
+        <item>75: Msingi Imara, Ninyi Wa Bwana </item>
+        <item>76: Mrithi Ufalme</item>
+        <item>77: Habari Za Usiku</item>
+        <item>78:Mpaka Lini Bwana</item>
+        <item>79: Nataka Imani Hii </item>
+        <item>80: Tupe Moto Wa Uhai </item>
+        <item>81: Siku Sita Zimepita</item>
+        <item>82: Ni Siku Ya Furaha </item>
+        <item>83: Ewe Skuli Ya Sabato </item>
+        <item>84: Ikumbuke Sabato </item>
+        <item>85: Salama Tumepita </item>
+        <item>86: Ukaribie Tena</item>
+        <item>87: Siku Ya Sabato</item>
+        <item>88:Siku Hii Ya Sabato </item>
+        <item>89: Asubuhi </item>
+        <item>90: Mapya Ni Mapenzi </item>
+        <item>91: Kaa Nami </item>
+        <item>92: Magharibi Jua </item>
+        <item>93: Jua La Rohoni Mwangu </item>
+        <item>94: Po Pote Mashamba Yajaa </item>
+        <item>95: Zileteni Zaka Kwa Hazina </item>
+        <item>96: Mali Yako Sasa </item>
+        <item>97: Sioshwi Dhambi Zangu </item>
+        <item>98: Nilikupa Wewe </item>
+        <item>99: Twende kwa yesu </item>
+        <item>100: Kuwatafuta </item>
+        <item>101: Yesu Akwita </item>
+        <item>102: Mlango Pa Moyo </item>
+        <item>103: Njoni Kwangu </item>
+        <item>104: Yesu Aliniita "Njoo" </item>
+        <item>105: Mchungaji Mpenzi </item>
+        <item>106: Huna Kitu Kwa Yesu? </item>
+        <item>107: Nipo Bwana, Nitume </item>
+        <item>108: Tumesikia Mbiu </item>
+        <item>109: Anisikiaye </item>
+        <item>110: Mlango Wazi</item>
+        <item>111: Tabibu Mkuu</item>
+        <item>112: Wewe Umechoka Sana? </item>
+        <item>113: Bubujiko</item>
+        <item>114: Yesu Nataka Kutakaswa Sana </item>
+        <item>115: Naendea Msalaba </item>
+        <item>116: Moyo Safi </item>
+        <item>117: Wamwendea Yesu </item>
+        <item>118: Nilipotoka Kabisa </item>
+        <item>119: Alilipa Bei </item>
+        <item>120: Msalaba wa Yesu </item>
+        <item>121: Katika Wenye Dhambi </item>
+        <item>122: Yote Namtolea Yesu</item>
+        <item>123: Yesu Kwa Imani </item>
+        <item>124: Umechoka Umesumbuka</item>
+        <item>125: Uniangalie </item>
+        <item>126: Nina Haja Nawe </item>
+        <item>127: Nisalama Rohoni Mwangu</item>
+        <item>128: Taamini Nitii Pia </item>
+        <item>129: Kumtegemea Mwokozi</item>
+        <item>130: Yesu Kwetu Ni Rafiki</item>
+        <item>131: Baba Anilinda </item>
+        <item>131a: Kwa Mahitaji Ya Kesho </item>
+        <item>132: Bwana Ni Mchunga </item>
+        <item>133: Po Pote Na Yesu </item>
+        <item>134: Tafuta Daima Utakatifu </item>
+        <item>135: Kwa Maombi Nachangamka</item>
+        <item>136: Niwe Kama Yesu </item>
+        <item>137: Saa Heri Ya Sala </item>
+        <item>138: Nitakuandama Kote</item>
+        <item>139: Uliniimbie Tena </item>
+        <item>140: Hivi Nilivyo Unitwae </item>
+        <item>141: Chini Ya Msalaba</item>
+        <item>142: Nasikia Sauti Yako</item>
+        <item>143: Naamini </item>
+        <item>144: Ni Wako Bwana</item>
+        <item>145: Namtaka Bwana Yesu </item>
+        <item>146: Twae Wangu Uzima</item>
+        <item>147: Uishi Ndani Yangu</item>
+        <item>148:Univute Karibu </item>
+        <item>149: Kuwa Wake Yesu</item>
+        <item>150: Hasha Maneno Mabaya Yasitoke </item>
+        <item>151: Huniongoza Mwokozi </item>
+        <item>152: Karibu Na Wewe, Mungu Wangu</item>
+        <item>153: Fikira Moja Tu</item>
+        <item>154: Yanipasa Kuwa Naye</item>
+        <item>155: Njiani Huniongoza</item>
+        <item>156: Uniongoze, Yehova</item>
+        <item>157: Mfalme Yu Mlangoni </item>
+        <item>158: U Mwendo Gani Nyumbani? </item>
+        <item>159: Anakuja Upesi</item>
+        <item>160: Watakatifu Kesheni</item>
+        <item>161: Piga Panda</item>
+        <item>162: Tumaini Liko </item>
+        <item>163: Anakuja, Bwana Yesu </item>
+        <item>164: Mishale Ya Nuru</item>
+        <item>165: "Uwe Imara" </item>
+        <item>166: Furaha Kwa Ulimwengu </item>
+        <item>167: Yu Hai, Yu Hai</item>
+        <item>168: Tarumbeta Ya Mwana </item>
+        <item>169: Tutashindae Hukumuni? </item>
+        <item>170: Jina Langu Limeandikwa Je? </item>
+        <item>171: Hukumu </item>
+        <item>172: Mfalme Ajapo</item>
+        <item>173: Hatujui Saa</item>
+        <item>174: Tukimngojea </item>
+        <item>175: Uso Kwa Uso </item>
+        <item>176: Ati Tuonane Mtoni? </item>
+        <item>177: Kazi Yangu Ikiisha</item>
+        <item>178: Ukingoni Mwa Yordani</item>
+        <item>179: Watafurahi </item>
+        <item>180: Pana Mahali Pazuri Mno </item>
+        <item>181:Tutakaa Mahali Pa Maji</item>
+        <item>182: Hapana Giza</item>
+        <item>183: Yesu Anaporudi</item>
+        <item>184:Panapo Pendo</item>
+        <item>185 :Mungu, Mapenzi Makamilifu</item>
+        <item> 186 : Hatutaagana Tena</item>
+        <item> 187 : Kufariki Naye Yesu</item>
+        <item>188 : Wimbi Litakasalo</item>
+        <item>189: Tubatize Upya</item>
+        <item>190: Raha Yangu Yote, Bwana</item>
+        <item>191: Mkate wa Mbingu</item>
+        <item>192 : Mwamba Wenye Imara</item>
+        <item>193 : Sauti Yake Mchungaji</item>
+        <item> 194 :Twaomba Baraka Zako</item>
+        <item>195 : Msingi Wa Kanisa</item>
+        <item> 196 : Vito Vya Thamani</item>
+        <item>197 : Anipenda Ni Kweli</item>
+        <item>198 :Kaza Sana Macho</item>
+        <item>199 : Upendo Ni Furaha</item>
+        <item> 200 : Baba Yetu Aliye Mbinguni</item>
+        <item>201: Hunipenda Pia.</item>
+        <item>202: Sikia Mlio </item>
+        <item>203: Ya Saba Ni Kwa Yesu </item>
+        <item>204: Kuwa Na Yesu Nyumbani </item>
+        <item>205: Msifu Mungu Ee Watoto </item>
+        <item>206: Mwokozi Wangu Anipenda </item>
+        <item>207: Nani Afanya Maua </item>
+        <item>208: Mungu Afanya Upindi </item>
+        <item>209: Napenda Sana Kifika </item>
+        <item>210: Roho Wa Mungu Wangu </item>
+        <item>211: Moyoni </item>
+        <item>212: Mtazame Mwokozi </item>
+        <item>213: Niwe Nao Uzuri Wa Mwokozi </item>
+        <item>214: Nataka Niwe Tayari </item>
+        <item>215: Ulimwengu Wataka </item>
+        <item>216: Moyoni `Nijaze </item>
+        <item>217: Omba Sana Asubuhi </item>
+        <item>218: Yesu Mwokozi Mpendwa </item>
+        <item>219: Pambazuka Nuru </item>
+        <item>220: Kwa Heri </item>
+
+
+
+
+
+    </string-array>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="story_content">
+        <item> Jack and Jill is the story of a boy and a girl who went up a hill together. They went to fetch a pail of water, but unfortunately, their plan is disrupted when Jack falls and hits his head, and rolls back down the hill. Then, Jill falls too, and comes tumbling down after Jack.</item>
+        <item>In Suzanne Collins’ The Hunger Games, the Capitol forces each of Panem’s 12 districts to choose two teenagers to participate in the Hunger Games, a gruesome, televised fight to the death. In the 12th district, Katniss Everdeen steps in for her little sister and enters the Games, where she is torn between her feelings for her hunting partner, Gale Hawthorne, and the district’s other tribute, Peeta Mellark, even as she fights to stay alive. The Hunger Games will change Katniss’ life forever, but her acts of humanity and defiance might just change the Games, too.</item>
+        <item>Gotham is the origin story of the great DC Comics Super-Villains and vigilantes, revealing an entirely new chapter that has never been told. From executive producer/writer Bruno Heller (The Mentalist, Rome), this one-hour drama follows one cop’s rise through a dangerously corrupt city teetering on the edge of evil and chronicles the genesis of one of the most popular super heroes of our time. Brave, earnest and eager to prove himself, the newly minted detective Gordon (Ben McKenzie) is partnered with the brash, but shrewd police legend Harvey Bullock (Donal Logue), as the two stumble upon the city’s highest-profile case ever: the murder of local billionaires Thomas and Martha Wayne.</item>
+    </string-array>
+</resources>

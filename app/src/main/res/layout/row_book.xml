@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="60dp"
+    android:layout_margin="3dp"
+    android:background="?selectableItemBackground">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/bible"
+        android:id="@+id/icon"
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/book"
+        android:text="Genesis"
+        android:layout_marginTop="3dp"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:singleLine="true"
+        android:layout_toRightOf="@+id/icon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chapters"
+        android:text="5 chapters"
+        android:visibility="gone"
+        android:layout_below="@+id/book"
+        android:layout_toRightOf="@+id/icon"/>
+
+</RelativeLayout>

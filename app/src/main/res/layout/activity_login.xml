@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dark_gradient"
+    tools:context=".Fragments.LoginActivity">
+
+    <ImageView
+        android:id="@+id/login_photo"
+        android:layout_width="194dp"
+        android:layout_height="134dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sda_logo"
+        android:tint="@color/colorAccent"/>
+
+
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/signinBtn"
+        android:layout_width="206dp"
+        android:layout_height="52dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/login_mail"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="@+id/login_mail"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.691">
+
+    </com.google.android.gms.common.SignInButton>
+
+    <TextView
+        android:id="@+id/tvor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="OR"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/login_mail"
+        app:layout_constraintTop_toTopOf="@+id/signinBtn"
+        app:layout_constraintVertical_bias="0.97"
+        tools:layout_editor_absoluteX="0dp"></TextView>
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="511dp" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="231dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="276dp"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"
+        android:drawableTint="@color/Miracle"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/colorAccent"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="166dp"
+        android:layout_height="40dp"
+        android:background="@drawable/reg_edittextstyle"
+        android:drawableRight="@drawable/ic_menu_send"
+        android:text="        LOGIN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_password"
+        app:layout_constraintVertical_bias="0.393" />
+
+    <EditText
+        android:id="@+id/login_mail"
+        android:layout_width="237dp"
+        android:layout_height="53dp"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:drawableTint="@color/Miracle"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Email"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/colorAccent"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/login_password"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/login_password"
+        app:layout_constraintTop_toBottomOf="@+id/login_photo"
+        app:layout_constraintVertical_bias="0.919" />
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/loginBtn"
+        app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/loginBtn"
+        app:layout_constraintTop_toTopOf="@+id/loginBtn" />
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="129dp"
+        android:layout_height="22dp"
+        android:text="Create Account"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+        app:layout_constraintVertical_bias="0.888" />
+
+    <ProgressBar
+        android:id="@+id/progress_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/login_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signinBtn"
+        app:layout_constraintVertical_bias="0.0">
+
+    </ProgressBar>
+</androidx.constraintlayout.widget.ConstraintLayout>

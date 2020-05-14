@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="stories_titles">
+        <item> short synopsis of the story of Jack and Jill:</item>
+        <item>Here’s a brief synopsis from Cliff’s Notes of The Hunger Games:</item>
+        <item> series Gotham</item>
+    </string-array>
+</resources>

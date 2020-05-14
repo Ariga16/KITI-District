@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#003B5C</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#E9E0E3</color>
+    <color name="black">#03160E</color>
+    <color name="Denim">#2F557F</color>
+    <color name="NAD_DENIM">#003B5C</color>
+    <color name="Cherubim">#F0B323</color>
+    <color name="grey">#DB7E7575</color>
+    <color name="Miracle">#7D2248</color>
+    <color name="NightMode">#313131</color>
+    <color name="green">@android:color/holo_green_dark</color>
+
+    <color name="former_colorPrimary">#3A6CB7</color>
+    <color name="former_colorPrimaryDark">#00574B</color>
+
+
+    <color name="night_mode">#313131</color>
+    <color name="night_mode_text">#9c9a9c</color>
+    <color name="editText">#f4f4f4</color>
+
+
+
+
+
+</resources>

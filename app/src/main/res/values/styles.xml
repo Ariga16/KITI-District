@@ -1,0 +1,87 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!-- Light/Day Mode theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#003B5C</item>
+        <item name="colorPrimaryDark">#00574B</item>
+        <item name="colorAccent">#E9E0E3</item>
+        <item name="backgroundcolor">#fcfcfc</item>
+        <item name="cardbackground">#ffffff</item>
+        <item name="textcolor">#808080</item>
+        <item name="postTextColor">#373737</item>
+        <item name="tintcolor">#000000</item>
+        <item name="buttoncolor">#2196F3</item>
+        <item name="ViewPost">#2e2e2e</item>
+        <item name="nyimbo_logo">#2F557F</item>
+        <item name="CommentBackground">#f4f4f4</item>
+        <item name="CommentTextColor">#969595</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+        <item name="commentstyle">@drawable/comment_edittextstyle</item>
+        <item name="nav_gradient">@drawable/blue_gradient</item>
+        <item name="nightmode">#ffffff</item>
+        <item name="design_default_colorPrimary">#3F51B5</item>
+        <item name="design_default_colorPrimaryDark">#00574B</item>
+
+
+    </style>
+
+    <!-- Night/Dark Mode theme. -->
+    <style name="darktheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#303030</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#303030</item>
+        <item name="backgroundcolor">#303030</item>
+        <item name="cardbackground">#424242</item>
+        <item name="textcolor">#ffffff</item>
+        <item name="postTextColor">#ffffff</item>
+        <item name="tintcolor">#ffffff</item>
+        <item name="buttoncolor">#2196F3</item>
+        <item name="ViewPost">#ffffff</item>
+        <item name="nyimbo_logo">#ffffff</item>
+        <item name="CommentBackground">#424242</item>
+        <item name="CommentTextColor">#ffffff</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+        <item name="commentstyle">@drawable/regstyledark</item>
+        <item name="nav_gradient">@drawable/dark_gradient</item>
+        <item name="nightmode">#313131</item>
+        <item name="design_default_colorPrimary">#ffffff</item>
+        <item name="design_default_colorPrimaryDark">#ffffff</item>
+
+    </style>
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="MtoolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    //style spinner
+    <style name="Spinner" parent="Widget.AppCompat.Spinner">
+        <item name="backgroundTint">@color/colorAccent</item>
+    </style>
+    //style checkbox
+    <style name="WhiteCheck">
+        <item name="colorAccent">#fff</item>
+    </style>
+
+
+
+</resources>

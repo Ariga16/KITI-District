@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ChurchLevelFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabLayout">
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postRV"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tabLayout"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/progressbar"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

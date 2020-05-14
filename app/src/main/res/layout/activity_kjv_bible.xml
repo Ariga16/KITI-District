@@ -1,0 +1,179 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".Activities.kjvBibleActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/quick_nav"
+        android:layout_below="@+id/toolbar"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:visibility="visible"
+        android:animateLayoutChanges="true"
+        android:gravity="center_vertical"
+        android:layout_margin="5dp">
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:background="@drawable/gray_background"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/book"/>
+
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:background="@drawable/gray_background"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/chapter"/>
+
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:background="@drawable/gray_background"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/verse"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:id="@+id/go"
+            android:layout_marginLeft="5dp"
+            android:text="GO"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/recycler"
+        android:layout_below="@+id/quick_nav"
+        android:padding="2dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:visibility="gone"
+        android:animateLayoutChanges="true"
+        android:id="@+id/downloader">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_centerVertical="true"
+            android:id="@+id/download_prompt"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please install the Bible\nIt's only 5 MB"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:id="@+id/install_prompt"
+                android:fontFamily="sans-serif-condensed"/>
+
+
+            <ImageButton
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/download_b1"
+                android:scaleType="fitXY"
+                android:id="@+id/download_bible"
+                android:layout_marginTop="10dp"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:id="@+id/downloading_view"
+            android:animateLayoutChanges="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/download_prompt"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:text="0%"
+                android:visibility="gone"
+                android:id="@+id/percentage_download"
+                android:fontFamily="sans-serif-condensed"/>
+            <com.pitt.library.fresh.FreshDownloadView
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/grey" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:text=""
+                android:visibility="gone"
+                android:id="@+id/progress"
+                android:fontFamily="sans-serif-condensed"/>
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cover"
+        android:background="@drawable/bible_cover2">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/text"/>
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/text"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

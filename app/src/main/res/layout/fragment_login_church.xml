@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Login_church"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/dark_gradient">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@color/colorAccent"
+        android:text="One more Step"
+        android:id="@+id/prompt"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="sans-serif-thin"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@+id/prompt"
+        android:id="@+id/prompt2"
+        android:textColor="@color/colorAccent"
+        android:text="Select your church below"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="sans-serif-thin"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/checkes"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/parish"
+            style="@style/Spinner"
+            android:layout_marginTop="10dp"></Spinner>
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/church"
+            style="@style/Spinner"
+            android:layout_marginTop="10dp"></Spinner>
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/district"
+            style="@style/Spinner"
+            android:layout_marginTop="10dp"></Spinner>
+
+
+        <Button
+            android:id="@+id/proceed"
+            android:layout_width="249dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/regstyledenim"
+            android:drawableRight="@drawable/ic_menu_send"
+            android:drawableTint="@color/colorAccent"
+            android:text="PROCEED"
+            android:textColor="@color/colorAccent" />
+
+    </LinearLayout>
+
+</RelativeLayout>
