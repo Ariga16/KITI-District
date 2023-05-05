@@ -1,16 +1,32 @@
 package com.dacasa.sdakitidistrict.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.Spinner;
+import android.widget.TextView;
 
+import com.dacasa.sdakitidistrict.Activities.BibleView;
+import com.dacasa.sdakitidistrict.Adapters.BibleBooksAdapter;
+import com.dacasa.sdakitidistrict.Commoners.Bible;
+import com.dacasa.sdakitidistrict.POJOS.Book;
 import com.dacasa.sdakitidistrict.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.pitt.library.fresh.FreshDownloadView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,7 +36,7 @@ import com.dacasa.sdakitidistrict.R;
  * Use the {@link HighlightsFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HighlightsFragment extends Fragment {
+public class HighlightsFragment extends Fragment implements BibleBooksAdapter.BookListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -31,6 +47,24 @@ public class HighlightsFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    View downloader,download_prompt,downloading_view,quick_nav,go,cover;
+    FreshDownloadView progressBar;
+    TextView percent_download,progress;
+    ImageButton download_button;
+    RecyclerView recycler;
+    Bible bible;
+    StorageReference storage;
+    BibleBooksAdapter bibleBooksAdapter;
+    ArrayAdapter<String> booksAdapter,chaptersAdapter,verseAdapter;
+    DatabaseReference database;
+    FileDownloadTask downloadTask;
+    Spinner books,chapters,verses;
+    private  boolean downloading = false;
+
+
+
+
 
     public HighlightsFragment() {
         // Required empty public constructor
@@ -67,8 +101,25 @@ public class HighlightsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_highlights, container, false);
+        View fragmentView = inflater.inflate(R.layout.fragment_highlights, container,false);
+
+
+        return fragmentView;
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        storage = FirebaseStorage.getInstance().getReferenceFromUrl("gs://sda-kiti-district-9a0cf.appspot.com");
+        database = FirebaseDatabase.getInstance().getReference();
+        bible = new Bible(getActivity());
+
+    }
+
+
+
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -87,6 +138,14 @@ public class HighlightsFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void bookClicked(Book book) {
+        Intent intent = new Intent(getActivity(), BibleView.class);
+        intent.putExtra("book",book.getIndex());
+        startActivity(intent);
+
     }
 
     /**

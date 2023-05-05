@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/reg_edittextstyle"
         android:ems="10"
+        android:visibility="gone"
         android:enabled="false"
         android:hint="kondegang@gmail.com , kondegang463@gmail.com"
         android:inputType="textPersonName"
@@ -91,6 +92,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descriptionmail"
         app:layout_constraintVertical_bias="0.032"></Button>
+
+    <ImageView
+        android:id="@+id/callBtn"
+        android:layout_width="86dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BtnSend"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionmail"
+        app:layout_constraintVertical_bias="0.031"
+        app:srcCompat="@drawable/ic_phone_black_24dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,18 +27,28 @@
             android:layout_height="40dp"
             android:background="@drawable/ic_access_time_black_24dp"
             android:backgroundTint="@color/colorAccent"
+            android:layout_weight="1"
             android:layout_margin="10dp"></ImageButton>
 
         <TextView
             android:id="@+id/eventtime"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="00:00AM"
             android:gravity="center"
             android:textSize="30sp"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
+            android:layout_weight="2"
             android:layout_margin="10dp"></TextView>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alarm Me"
+            android:textColor="@color/colorAccent"
+            android:buttonTint="@color/colorAccent"
+            android:layout_weight="1"
+            android:id="@+id/alarmme"></CheckBox>
     </LinearLayout>
 
     <Button

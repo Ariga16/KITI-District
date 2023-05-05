@@ -70,7 +70,7 @@ public class BibleBooksAdapter extends RecyclerView.Adapter<BibleBooksAdapter.Bo
 
     class BookHolder extends RecyclerView.ViewHolder{
         TextView book,chapters;
-        @SuppressLint("WrongViewCast")
+        //@SuppressLint("WrongViewCast")
         public BookHolder(View v) {
             super(v);
             book = (TextView)v.findViewById(R.id.book);

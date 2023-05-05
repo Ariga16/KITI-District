@@ -51,9 +51,6 @@ public class Nyimbo_Details extends AppCompatActivity {
 
     }
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // set dark theme
@@ -90,7 +87,6 @@ public class Nyimbo_Details extends AppCompatActivity {
         songContent.setMovementMethod(new ScrollingMovementMethod());
         //enable back arrow to main activity or recyclerview
         //getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
-
 
     }
 }

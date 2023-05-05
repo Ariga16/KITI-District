@@ -29,6 +29,7 @@ public class Nyimbo_splash extends AppCompatActivity {
         else setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nyimbo_splash);
+
         tv = (TextView) findViewById(R.id.tvNyimbo);
         iv = (ImageView) findViewById(R.id.ivLogo);
         Animation myanim = AnimationUtils.loadAnimation(this,R.anim.mytransition);

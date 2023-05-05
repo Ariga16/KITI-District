@@ -1,10 +1,14 @@
 package com.dacasa.sdakitidistrict.Fragments;
 
+import android.app.ActivityOptions;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,9 +16,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import com.dacasa.sdakitidistrict.Activities.PostDetailActivity;
 import com.dacasa.sdakitidistrict.Adapters.PostAdapter;
+import com.dacasa.sdakitidistrict.Commoners.PostItemClickListener;
 import com.dacasa.sdakitidistrict.Models.Post;
 import com.dacasa.sdakitidistrict.R;
 import com.google.firebase.database.DataSnapshot;
@@ -34,7 +41,7 @@ import java.util.List;
  * Use the {@link ChurchLevelFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ChurchLevelFragment extends Fragment {
+public class ChurchLevelFragment extends Fragment implements PostItemClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -43,6 +50,11 @@ public class ChurchLevelFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    public static  int index = -1;
+    public static  int top = -1;
+    LinearLayoutManager mLayoutManager;
+
 
     private OnFragmentInteractionListener mListener;
 
@@ -99,6 +111,8 @@ public class ChurchLevelFragment extends Fragment {
         postRecyclerView.setHasFixedSize(true);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Posts");
+        // save firebase data offline
+        databaseReference.keepSynced(true);
 
         // progressbar on data display
         progressBar = fragmentView.findViewById(R.id.progressbar);
@@ -121,19 +135,27 @@ public class ChurchLevelFragment extends Fragment {
                 for (DataSnapshot postsnap: dataSnapshot.getChildren()){
 
                     Post post = postsnap.getValue(Post.class);
-                    postList.add(post);
-
+                    // add reverse from top to bottom
+                    postList.add(0,post);
                 }
 
+                postAdapter = new PostAdapter(getActivity(), postList, new PostItemClickListener() {
+                    @Override
+                    public void onPostClick(Post post, ImageView postImageView) {
 
-                postAdapter = new PostAdapter(getActivity(),postList);
+                        Intent intent = new Intent(getActivity(),PostDetailActivity.class);
+                        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(getActivity(),postImageView,"SharedName");
+                        startActivity(intent,options.toBundle());
+
+                    }
+                });
                 postRecyclerView.setAdapter(postAdapter);
-
+                // add reverse from top to bottom
+                postRecyclerView.smoothScrollToPosition(0);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
             }
         });
 
@@ -155,16 +177,47 @@ public class ChurchLevelFragment extends Fragment {
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+        //index = mLayoutManager.findFirstCompletelyVisibleItemPosition();
+        //View v = postRecyclerView.getChildAt(0);
+        //top = (v == null) ? 0: (v.getTop() - postRecyclerView.getPaddingTop());
+
+    }
+
+
+
+
+    @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (index != -1){
+           // mLayoutManager.scrollToPositionWithOffset(index,top);
+        }
+
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @Override
+    public void onPostClick(Post post, ImageView postImageView) {
+        Intent intent = new Intent(getActivity(),PostDetailActivity.class);
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(getActivity(),postImageView,"SharedName");
+        startActivity(intent,options.toBundle());
+
+
     }
 
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
      * to the activity and potentially other fragments contained in that
-     * activity.
+     * activity.kk
      * <p>
      * See the Android Training lesson <a href=
      * "http://developer.android.com/training/basics/fragments/communicating.html"
@@ -174,4 +227,5 @@ public class ChurchLevelFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 }

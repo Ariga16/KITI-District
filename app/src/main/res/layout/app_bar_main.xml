@@ -8,42 +8,22 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="244dp"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:background="@drawable/miracle_gradient"
-        app:elevation="0dp">
-
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsingtoolbar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/sda_logo"
-            android:backgroundTint="@color/colorAccent"
-            app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginEnd="64dp"
-            app:expandedTitleMarginStart="48dp"
-            app:layout_anchor="@+id/appbar"
-            app:layout_anchorGravity="center"
-            app:layout_scrollFlags="exitUntilCollapsed|scroll"
-            app:title="   SDA KITI District">
+        android:layout_height="70dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
             </androidx.appcompat.widget.Toolbar>
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_main2" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:visibility="gone"
+        android:visibility="visible"
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -122,6 +122,15 @@
                 app:buttonTint="@color/colorAccent"
                 android:textColor="@android:color/white"
                 android:theme="@style/WhiteCheck"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deaconary"
+                android:text="Deaconary"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
 
 
         </LinearLayout>
@@ -198,6 +207,15 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/sabbathSch"
                 android:text="Sabbath School/Personal Ministry"
+                android:padding="5dp"
+                app:buttonTint="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:theme="@style/WhiteCheck"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/shepherdess"
+                android:text="Shepherdess"
                 android:padding="5dp"
                 app:buttonTint="@color/colorAccent"
                 android:textColor="@android:color/white"

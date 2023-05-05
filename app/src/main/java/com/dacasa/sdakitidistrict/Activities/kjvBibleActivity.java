@@ -60,7 +60,6 @@ public class kjvBibleActivity extends AppCompatActivity implements BibleBooksAda
     FileDownloadTask downloadTask;
     Spinner books,chapters,verses;
     private  boolean downloading = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +69,6 @@ public class kjvBibleActivity extends AppCompatActivity implements BibleBooksAda
         bible = new Bible(this);
         initUI();
     }
-
 
     public void initUI(){
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
@@ -131,21 +129,16 @@ public class kjvBibleActivity extends AppCompatActivity implements BibleBooksAda
                     public void onAnimationEnd(Animator animator) {
                         cover.setVisibility(View.GONE);
                     }
-
                     @Override
                     public void onAnimationCancel(Animator animator) {
-
                     }
-
                     @Override
                     public void onAnimationRepeat(Animator animator) {
-
                     }
                 });
             }
         },2000);
     }
-
 
     public void populateRecycler(){
         recycler = (RecyclerView) findViewById(R.id.recycler);
@@ -212,7 +205,6 @@ public class kjvBibleActivity extends AppCompatActivity implements BibleBooksAda
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
             }
         });
     }
@@ -229,14 +221,12 @@ public class kjvBibleActivity extends AppCompatActivity implements BibleBooksAda
         }
     };
 
-
     @Override
     public void bookClicked(Book book) {
         Intent intent = new Intent(this,BibleView.class);
         intent.putExtra("book",book.getIndex());
         startActivity(intent);
     }
-
     public void downloadBible(){
         progressBar.reset();
         downloading_view.setVisibility(View.VISIBLE);
@@ -293,8 +283,6 @@ public class kjvBibleActivity extends AppCompatActivity implements BibleBooksAda
             }
         });
     }
-
-
     private int backPresses = 0;
     @Override
     public void onBackPressed() {
@@ -356,8 +344,6 @@ public class kjvBibleActivity extends AppCompatActivity implements BibleBooksAda
         return filterlist;
     }
 
-
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -369,11 +355,7 @@ public class kjvBibleActivity extends AppCompatActivity implements BibleBooksAda
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
-
-
-
 
 }

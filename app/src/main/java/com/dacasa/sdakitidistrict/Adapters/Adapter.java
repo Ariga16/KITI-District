@@ -19,6 +19,7 @@ import androidx.appcompat.view.menu.MenuView;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.dacasa.sdakitidistrict.Fragments.NotesFragment;
 import com.dacasa.sdakitidistrict.Nyimbo_Details;
 import com.dacasa.sdakitidistrict.POJOS.Wimbo;
 import com.dacasa.sdakitidistrict.R;
@@ -51,6 +52,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>implements 
     }
 
 
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -66,10 +68,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>implements 
 
         //animation for song title
         holder.songTitle.setAnimation(AnimationUtils.loadAnimation(mcontext,R.anim.fade_transition_animation));
+        // anim for song content
+        holder.songContent.setAnimation(AnimationUtils.loadAnimation(mcontext,R.anim.fade_transition_animation));
+
+
         //animation for linear layout
-        holder.LLcontainer.setAnimation(AnimationUtils.loadAnimation(mcontext,R.anim.fade_transition_animation));
+//        holder.LLcontainer.setAnimation(AnimationUtils.loadAnimation(mcontext,R.anim.fade_transition_animation));
         //anim for cardview
-        holder.CVcontainer.setAnimation(AnimationUtils.loadAnimation(mcontext,R.anim.fade_scale_animation));
+  //      holder.CVcontainer.setAnimation(AnimationUtils.loadAnimation(mcontext,R.anim.fade_scale_animation));
 
 
 
@@ -152,8 +158,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>implements 
 
             songTitle=itemView.findViewById(R.id.tvsongTitle);
             songContent=itemView.findViewById(R.id.tvSongContent);
-            LLcontainer=itemView.findViewById(R.id.LLcontainer);
-            CVcontainer=itemView.findViewById(R.id.CVcontainer);
+            //LLcontainer=itemView.findViewById(R.id.LLcontainer);
+            //CVcontainer=itemView.findViewById(R.id.CVcontainer);
 
             if (isDark){
                 setDarkTheme();

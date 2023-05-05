@@ -29,14 +29,13 @@ import java.text.DecimalFormat;
 
 public class P {
 
-    public static final String bible_path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/SDA KITI DISTRICT/.bible";
+    public static final String bible_path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/SDA KITI DISTRICT/Bible/.bible";
     public static final String songs_path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/PCEA/songs";
-
     public static final int VERSE_ONLY = 0,VERSE_IMAGE_MESSAGE = 1,MESSAGE = 2,MESSAGE_IMAGE = 3,VERSE_MESSAGE = 4,ANNOUNCEMENT_IMAGE = 5,ANNOUNCEMENT = 6,BULLETIN = 7,IMAGE_ONLY = 8;
 
 
     public static boolean bibleAvailable(){
-        File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/SDA KITI DISTRICT/.bible/bible.db");
+        File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/SDA KITI DISTRICT/Bible/bible.db");
         if (!file.exists()){
             return false;
         }
@@ -45,10 +44,6 @@ public class P {
         }
         return false;
     }
-
-
-
-
 
     public static Chapter chapterFromBundle(Bundle b){
         return new Chapter(b.getInt("b"),b.getInt("c"));
@@ -60,11 +55,6 @@ public class P {
         b.putInt("c",c.getChapter());
         return b;
     }
-
-
-
-
-
 
     public static void enterReveal(final View layout){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){

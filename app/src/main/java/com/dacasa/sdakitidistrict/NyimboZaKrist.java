@@ -35,24 +35,15 @@ public class NyimboZaKrist extends AppCompatActivity {
             setTheme(R.style.darktheme);
         }
         else setTheme(R.style.AppTheme);
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nyimbo_za_krist);
 
         //get the list of songs titles and contents in string array
-
         final String[] titles = getResources().getStringArray(R.array.songs_title);
         final String[] contents = getResources().getStringArray(R.array.songs_content);
 
-
-
-
         rootlayout =findViewById(R.id.root_layout);
-
         searchInput = findViewById(R.id.search_input);
-
-
 
         recyclerView = findViewById(R.id.songListView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -78,11 +69,6 @@ public class NyimboZaKrist extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
 
 
     }

@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.1"
+    buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.dacasa.sdakitidistrict"
         minSdkVersion 16
@@ -38,9 +38,7 @@ dependencies {
     implementation 'com.pitt.fresh.library:freshdownloadview:1.0'
     //stacktransformer
     implementation 'com.eftimoff:android-viewpager-transformers:1.0.1@aar'
-    // iconics drawable
-    implementation 'com.mikepenz:iconics-core:2.8.1@aar'
-    implementation 'com.mikepenz:fontawesome-typeface:4.6.0.3@aar'
+
     // text animator
     implementation 'com.hanks:htextview-base:0.1.6'
     implementation 'com.hanks:htextview-evaporate:0.1.6'
@@ -50,7 +48,7 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-auth:19.1.0'
     // firebase storage
-    implementation 'com.google.firebase:firebase-storage:19.1.0'
+    implementation 'com.google.firebase:firebase-storage:19.2.1'
     //firebase Database
     implementation 'com.google.firebase:firebase-database:19.1.0'
     //firebase messaging
@@ -61,7 +59,12 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.10.0'
     implementation 'androidx.preference:preference:1.1.0-alpha05'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+    // rounded corner image view
+    implementation 'com.github.zjywill:roundedcornerimageview:1.1.0'
 
+    // iconics
+    implementation 'com.mikepenz:iconics-core:2.8.1@aar'
+    implementation 'com.mikepenz:fontawesome-typeface:4.6.0.3@aar'
 
     // add SDKs for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries

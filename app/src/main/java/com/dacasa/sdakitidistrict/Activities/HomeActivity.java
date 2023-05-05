@@ -13,7 +13,6 @@ public class HomeActivity extends AppCompatActivity {
     //night mode
     SharedPref sharedPref;
 
-
     CustomCalenderView customCalenderView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

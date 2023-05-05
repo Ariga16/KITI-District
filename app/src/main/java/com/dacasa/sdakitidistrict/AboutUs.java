@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.dacasa.sdakitidistrict.Activities.Email;
 import com.dacasa.sdakitidistrict.Activities.RegisterActivity;
@@ -37,14 +38,24 @@ public class AboutUs extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+ //       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        ImageView imgback = findViewById(R.id.imgback);
+
 
         button = findViewById(R.id.BtnFeedback);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(AboutUs.this, Email.class));
+            }
+        });
+
+        imgback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 

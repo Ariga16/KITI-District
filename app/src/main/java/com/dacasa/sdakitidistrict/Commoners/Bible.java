@@ -12,7 +12,6 @@ import com.dacasa.sdakitidistrict.POJOS.Verse;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Bible extends SQLiteOpenHelper {
 
     public Bible(Context context) {
@@ -21,14 +20,12 @@ public class Bible extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
-
 
     public String bookName(int book_index){
         String name = null;
@@ -52,7 +49,6 @@ public class Bible extends SQLiteOpenHelper {
         return name;
     }
 
-
     public List<Verse> getVerses(Chapter chapter){
         List<Verse> verses = new ArrayList<>();
         SQLiteDatabase db = getDb();
@@ -75,7 +71,6 @@ public class Bible extends SQLiteOpenHelper {
         db.close();
         return verses;
     }
-
 
     public List<Verse> getVerses(int book,int chapter,int from, int to){
         List<Verse> verses = new ArrayList<>();
@@ -102,13 +97,9 @@ public class Bible extends SQLiteOpenHelper {
 
 
     public SQLiteDatabase getDb(){
-        if (!com.dacasa.sdakitidistrict.Commoners.P.bibleAvailable())return null;
-        SQLiteDatabase db = SQLiteDatabase.openDatabase(com.dacasa.sdakitidistrict.Commoners.P.bible_path+"/bible.db",null,SQLiteDatabase.OPEN_READWRITE);
+        if (!P.bibleAvailable())return null;
+        SQLiteDatabase db = SQLiteDatabase.openDatabase(P.bible_path+"/bible.db",null,SQLiteDatabase.OPEN_READWRITE);
         return db;
     }
-
-
-
-
 
 }

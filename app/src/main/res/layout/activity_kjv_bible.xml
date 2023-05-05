@@ -29,7 +29,6 @@
             android:layout_marginLeft="5dp"
             android:id="@+id/book"/>
 
-
         <Spinner
             android:layout_width="0dp"
             android:layout_height="30dp"
@@ -37,7 +36,6 @@
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
             android:id="@+id/chapter"/>
-
 
         <Spinner
             android:layout_width="0dp"
@@ -96,7 +94,6 @@
                 android:gravity="center"
                 android:id="@+id/install_prompt"
                 android:fontFamily="sans-serif-condensed"/>
-
 
             <ImageButton
                 android:layout_width="120dp"

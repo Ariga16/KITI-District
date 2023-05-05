@@ -59,6 +59,7 @@ import com.mikepenz.fontawesome_typeface_library.FontAwesome;
 import com.mikepenz.iconics.IconicsDrawable;
 import com.mikepenz.iconics.context.IconicsContextWrapper;
 
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -115,7 +116,7 @@ public class BibleView extends AppCompatActivity implements BibleBooksAdapter.Bo
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Toast.makeText(BibleView.this, "Select a verse then press done", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(BibleView.this, "Select a verse then press done", Toast.LENGTH_LONG).show();
                 }
             },1000);
         }
@@ -134,7 +135,7 @@ public class BibleView extends AppCompatActivity implements BibleBooksAdapter.Bo
         Log.e("CHAPTER DISCOVERED", book + "," + chapter + "," + verse_from + "," + verse_to);
         if (chapter > 0){
             getSupportActionBar().setTitle(bible.bookName(book));
-            //getSupportActionBar().setSubtitle("Chapter " + chapter);//changed from to
+            //getSupportActionBar().setSubtitle("Chapter " + chapter);//changed from to line below....
             getSupportActionBar().setSubtitle("Chapter 1");
             if (chapter>1){
                 VerseListing verseListing = new VerseListing();
@@ -192,6 +193,7 @@ public class BibleView extends AppCompatActivity implements BibleBooksAdapter.Bo
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // disabled mike penz iconic
         toolbar.setNavigationIcon(new IconicsDrawable(this, FontAwesome.Icon.faw_bars).color(Color.WHITE).sizeDp(20));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -295,7 +297,7 @@ public class BibleView extends AppCompatActivity implements BibleBooksAdapter.Bo
     @Override
     public void verseLongClicked(Verse verse) {
         if (actionMode == null) {
-            //actionMode = startSupportActionMode(actionModeCallback);
+          //  actionMode = startSupportActionMode(actionModeCallback);
         }
         ((VerseListing)chapterAdapter.getItem(viewPager.getCurrentItem())).verseLongClicked(verse);
     }
@@ -355,10 +357,15 @@ public class BibleView extends AppCompatActivity implements BibleBooksAdapter.Bo
         }
     };
 
+
+    // disabled mike penz iconics
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(IconicsContextWrapper.wrap(newBase));
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -497,6 +504,73 @@ public class BibleView extends AppCompatActivity implements BibleBooksAdapter.Bo
 
 
 
+    private class ActionModeCallback implements ActionMode.Callback {
+        @SuppressWarnings("unused")
+        private final String TAG = ActionModeCallback.class.getSimpleName();
+        MenuItem done;
+
+
+        @Override
+        public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+            mode.getMenuInflater().inflate(R.menu.verse_selection_menu, menu);
+            //Drawable high = new IconicsDrawable(getBaseContext(), FontAwesome.Icon.faw_pencil).color(Color.WHITE).sizeDp(20);
+            //Drawable shar = new IconicsDrawable(getBaseContext(), FontAwesome.Icon.faw_share_alt).color(Color.WHITE).sizeDp(20);
+            MenuItem highlight = menu.findItem(R.id.highlight);
+            done = menu.findItem(R.id.done);
+            done.setTitle(forResult ? "DONE" : "Cancel");
+          //  highlight.setIcon(high);
+            MenuItem share = menu.findItem(R.id.share);
+           // share.setIcon(shar);
+            share.setVisible(!forResult);
+            highlight.setVisible(!forResult);
+//            menu.findItem(R.id.add_note).setVisible(!forResult);
+            menu.close();
+            return true;
+        }
+
+        @Override
+        public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+            return false;
+        }
+
+        @Override
+        public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.share:
+                    share(((VerseListing)chapterAdapter.getItem(viewPager.getCurrentItem())).getSelection());
+                    mode.finish();
+                    return true;
+                case R.id.highlight:
+                    highlight();
+                    mode.finish();
+                    return true;
+                case R.id.done:
+                    if (forResult){
+                        returnSelection();
+                    }else {
+                        actionMode.finish();
+                    }
+                    return true;
+                default:
+                    addNote();
+                    mode.finish();
+                    return true;
+            }
+        }
+
+        @Override
+        public void onDestroyActionMode(ActionMode mode) {
+            try {
+                ((VerseListing)chapterAdapter.getItem(viewPager.getCurrentItem())).clearSelection();
+            }catch (Exception e){}
+            actionMode = null;
+        }
+    }
+
+
+
+
+
 
 
     public void share(List<Verse> verses){
@@ -533,7 +607,5 @@ public class BibleView extends AppCompatActivity implements BibleBooksAdapter.Bo
         super.onStop();
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
-
-
 
 }

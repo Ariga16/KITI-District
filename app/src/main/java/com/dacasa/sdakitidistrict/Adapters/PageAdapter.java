@@ -28,10 +28,12 @@ public class PageAdapter extends FragmentPagerAdapter {
             case 0:
                 return new ChurchLevelFragment();
             case 1:
-                return new MainCalender();
+                return new NotesFragment();
             case 2:
-                return new MissionFragment();
+                return new MainCalender();
             case 3:
+                return new MissionFragment();
+            case 4:
                 return new LessonFragment();
                 default: return null;
         }

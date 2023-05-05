@@ -46,6 +46,25 @@
                 android:text="Time"
                 android:textSize="20dp"></TextView>
 
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/alarmmeBtn"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_notifications_off"
+                android:background="@color/colorAccent"></ImageButton>
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/delete"
+                android:text="Delete"
+                android:drawableLeft="@drawable/ic_delete_black_24dp"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"></Button>
 
 
 

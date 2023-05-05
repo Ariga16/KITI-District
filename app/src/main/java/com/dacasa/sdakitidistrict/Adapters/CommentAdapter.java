@@ -21,8 +21,6 @@ import java.util.Locale;
 
 public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CommentViewHolder> {
 
-
-
     private Context mContext;
     private List<Comment> mData;
 

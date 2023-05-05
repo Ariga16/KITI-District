@@ -1,59 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="0dp"
-    android:background="?attr/backgroundcolor">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="?attr/backgroundcolor"
+    android:layout_margin="2dp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/CVauthorscontainer"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/cardbackground"
-        android:layout_marginTop="0dp">
-        <LinearLayout
-            android:id="@+id/LLauthorscontainer"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:background="?selectableItemBackground">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/icon"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/rounduserphoto"/>
+
+        <TextView
+            android:id="@+id/tvStoryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/postTextColor"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Sample Song Title"
+            android:layout_toRightOf="@+id/icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textSize="13sp"
+            android:id="@+id/subtitle"
+            android:layout_below="@+id/title"
+            android:text="..."
+            android:layout_toRightOf="@+id/icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:id="@+id/text"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_below="@+id/subtitle"
+            android:text="..."/>
+
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="?attr/cardbackground"
-            android:padding="0dp">
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:layout_below="@+id/text"
+            android:layout_marginTop="5dp"
+            android:id="@+id/verse_view"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/colorAccent">
 
-            <TextView
-                android:id="@+id/tvStoryTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sample Song Title"
-                android:layout_gravity="center"
-                android:textColor="#258BD6"
-                android:textSize="18sp"
-                android:textStyle="bold"></TextView>
+            <LinearLayout
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="59dp"
-                app:srcCompat="@drawable/rounduserphoto" />
-
-            <TextView
-                android:id="@+id/tvStoryContent"
+                android:id="@+id/LLauthorscontainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Sample Song Content Description....."
-                android:textColor="?attr/textcolor"
-                android:inputType="textLongMessage"
-                android:textSize="16sp"
-                android:maxLength="41"/>
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:background="?selectableItemBackground">
+
+
+                <TextView
+                    android:id="@+id/tvStoryContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:ellipsize="end"
+                    android:text="Sample Song Content Description...."
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/verse_view"
+            android:layout_marginTop="5dp"
+            android:gravity="center|left">
         </LinearLayout>
 
-
-    </androidx.cardview.widget.CardView>
-
+    </RelativeLayout>
 
 
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

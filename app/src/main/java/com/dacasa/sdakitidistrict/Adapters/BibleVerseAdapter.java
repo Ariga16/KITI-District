@@ -26,7 +26,7 @@ public class BibleVerseAdapter extends RecyclerView.Adapter<BibleVerseAdapter.Ve
     List<Verse> verses = new ArrayList();
     List<Verse> originalList = new ArrayList();
     List<Verse> selection = new ArrayList();
-    com.dacasa.sdakitidistrict.Commoners.Bible bible;
+    Bible bible;
     VerseListener VerseListener;
     Resources r;
     private boolean nightMode = false;

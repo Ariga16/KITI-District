@@ -16,8 +16,12 @@
         android:layout_height="match_parent">
 
 
-        <ImageView
+        <com.comix.rounded.RoundedCornerImageView
+            android:transitionName="SharedName"
             android:id="@+id/post_detail_img"
+            app:cornerRadius="6dp"
+            app:cornerColor="@color/black"
+            app:cornerBottomDisable="true"
             android:layout_width="0dp"
             android:layout_height="250dp"
             android:scaleType="centerCrop"

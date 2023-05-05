@@ -20,9 +20,23 @@
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
         <item name="commentstyle">@drawable/comment_edittextstyle</item>
         <item name="nav_gradient">@drawable/blue_gradient</item>
+        <item name="searchInputstyle">@drawable/search_input_style</item>
+        <item name="miracleGradient">@drawable/miracle_gradient</item>
+        <item name="topTablayout">@drawable/top</item>
         <item name="nightmode">#ffffff</item>
         <item name="design_default_colorPrimary">#3F51B5</item>
         <item name="design_default_colorPrimaryDark">#00574B</item>
+        <item name="splashtext">@color/NAD_DENIM</item>
+        //row post item
+        <item name="rowrelativebackgrnd">#eeeeee</item>
+        <item name="rowTitle">#2d313d</item>
+        <item name="rowName">#8d8f97</item>
+        <item name="rowDescription">@color/black</item>
+        <item name="rowDate">#8d8f97</item>
+        <item name="rowverse_viewBackground">#cecece</item>
+        <item name="rowbibleText">#373737</item>
+
+
 
 
     </style>
@@ -46,9 +60,23 @@
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
         <item name="commentstyle">@drawable/regstyledark</item>
         <item name="nav_gradient">@drawable/dark_gradient</item>
+        <item name="searchInputstyle">@drawable/search_input_dark_style</item>
+        <item name="miracleGradient">@drawable/dark_miracle_gradient</item>
+        <item name="topTablayout">@drawable/dark_top</item>
         <item name="nightmode">#313131</item>
         <item name="design_default_colorPrimary">#ffffff</item>
         <item name="design_default_colorPrimaryDark">#ffffff</item>
+        <item name="splashtext">#E9E0E3</item>
+        // row post item
+        <item name="rowrelativebackgrnd">#2d313d</item>
+        <item name="rowTitle">@color/Denim</item>
+        <item name="rowName">#8d8f97</item>
+        <item name="rowDescription">@color/colorAccent</item>
+        <item name="rowDate">#8d8f97</item>
+        <item name="rowverse_viewBackground">#313131</item>
+        <item name="rowbibleText">@color/night_mode_text</item>
+
+
 
     </style>
 

@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -158,14 +159,11 @@ public class PostDetailActivity extends AppCompatActivity {
                                showMessage("fail to add comment :" +e.getMessage());
                            }
                        });
-
-
                    }
-
 
                }
                else {
-                   showMessage("Please Type A comment before Adding");
+                   showMessage("type A comment before Adding");
                }
 
 
@@ -177,10 +175,12 @@ public class PostDetailActivity extends AppCompatActivity {
         // get post data
         // send post detail data to this activity first ...
 
-        //get post data
+        //get post datain
 
         String postImage = getIntent().getExtras().getString("postImage");
         Glide.with(this).load(postImage).into(imgPost);
+        // set animation
+        imgPost.setAnimation(AnimationUtils.loadAnimation(this,R.anim.scale_animation));
 
         String postTitle = getIntent().getExtras().getString("title");
         txtPostTitle.setText(postTitle);

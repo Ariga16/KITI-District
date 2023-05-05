@@ -14,12 +14,22 @@
         <attr name="nyimbo_logo" format="color"></attr>
         <attr name="nightmode" format="color"></attr>
         <attr name="commentstyle" format="dimension"></attr>
+        <attr name="searchInputstyle" format="dimension"></attr>
+        <attr name="miracleGradient" format="dimension"></attr>
         <attr name="nav_gradient" format="dimension"></attr>
         <attr name="design_default_colorPrimary" format="color"></attr>
         <attr name="design_default_colorPrimaryDark" format="color"></attr>
+        <attr name="splashtext" format="color"></attr>
 
-
-
+        // row post item
+        <attr name="rowrelativebackgrnd" format="color"></attr>
+        <attr name="topTablayout" format="dimension"></attr>
+        <attr name="rowTitle" format="color"></attr>
+        <attr name="rowName" format="color"></attr>
+        <attr name="rowDescription" format="color"></attr>
+        <attr name="rowDate" format="color"></attr>
+        <attr name="rowverse_viewBackground" format="color"></attr>
+        <attr name="rowbibleText" format="color"></attr>
 
     </declare-styleable>
 

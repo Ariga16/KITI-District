@@ -11,8 +11,8 @@
         <item
             android:id="@+id/nav_My_District"
 
-            android:icon="@drawable/ic_public_black_24dp"
-            android:title="My District" />
+            android:icon="@drawable/ic_video_label"
+            android:title="Live Streaming" />
         <item
             android:id="@+id/nav_Church_Calender"
             android:icon="@drawable/ic_date_range_black_24dp"
